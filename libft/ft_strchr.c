@@ -6,7 +6,7 @@
 /*   By: tromano <tromano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 18:25:58 by tromano           #+#    #+#             */
-/*   Updated: 2021/10/30 15:11:29 by tromano          ###   ########.fr       */
+/*   Updated: 2021/11/01 18:32:36 by tromano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ char	*ft_strchr(const char *s, int c)
 	while (s[i] != '\0')
 	{
 		if (s[i] == c)
-			return ((char *)s + i);
+			return (&((char *)s)[i]);
 		i++;
 	}
 	if (s[i] == c)
-		return ((char *)s + i);
+		return (&((char *)s)[i]);
 	return (0);
 }
