@@ -6,7 +6,7 @@
 #    By: tromano <tromano@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/30 14:14:11 by tromano           #+#    #+#              #
-#    Updated: 2021/10/30 17:28:50 by tromano          ###   ########.fr        #
+#    Updated: 2021/11/01 18:15:24 by tromano          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,17 +35,16 @@ SRCS	= ft_strlen.c\
 			ft_isprint.c\
 			ft_tolower.c\
 			ft_toupper.c\
-			ft_putendl_fd.c
-			
-# ft_strlcpy.c\
-# ft_strdup.c\
-# ft_calloc.c\
-# ft_substr.c\
-# ft_split.c\
-# ft_strtrim.c\
-# ft_itoa.c\
-# ft_striteri.c\
-# ft_strmapi.c
+			ft_putendl_fd.c\
+			ft_strlcpy.c\
+			ft_strdup.c\
+			ft_calloc.c\
+			ft_substr.c\
+			ft_split.c\
+			ft_strtrim.c\
+			ft_itoa.c\
+			ft_striteri.c\
+			ft_strmapi.c
 
 OBJS	= ${SRCS:.c=.o}
 

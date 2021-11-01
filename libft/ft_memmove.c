@@ -6,7 +6,7 @@
 /*   By: tromano <tromano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 17:16:07 by tromano           #+#    #+#             */
-/*   Updated: 2021/11/01 16:02:51 by tromano          ###   ########.fr       */
+/*   Updated: 2021/11/01 17:58:07 by tromano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,11 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	dest2 = (unsigned char *)dest;
 	if (src2 < dest2)
 	{
-		while (i < n)
+		while (n > 0)
 		{
 			dest2[n] = src2[n];
 			n--;
-			i++;
 		}
-		return (dest);
 	}
 	else
 	{

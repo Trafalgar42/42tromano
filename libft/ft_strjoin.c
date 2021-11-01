@@ -6,21 +6,11 @@
 /*   By: tromano <tromano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 13:43:39 by tromano           #+#    #+#             */
-/*   Updated: 2021/10/30 14:49:30 by tromano          ###   ########.fr       */
+/*   Updated: 2021/11/01 17:30:32 by tromano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int	ft_strlen(char const *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
 
 int	ft_lenlen(char const *s1, char const *s2)
 {
@@ -84,8 +74,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (str);
 }
 
-int	main(void)
-{
-	printf("%s\n", ft_strjoin("ouloulou", "alalalala"));
-	return (0);
-}
+// int	main(void)
+// {
+// 	printf("%s\n", ft_strjoin("ouloulou", "alalalala"));
+// 	return (0);
+// }
