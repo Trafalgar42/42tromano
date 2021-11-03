@@ -6,7 +6,7 @@
 /*   By: tromano <tromano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 14:08:12 by tromano           #+#    #+#             */
-/*   Updated: 2021/10/27 14:24:52 by tromano          ###   ########.fr       */
+/*   Updated: 2021/11/03 15:22:04 by tromano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,20 +20,20 @@ int	ft_atoi(char *str)
 	res = 0;
 	posneg = 1;
 	while ((str[i] <= 13 && str[i] >= 9) || str[i] == ' ')
-	{
 		i++;
-	}
-	while (str[i] == '+' || str[i] == '-')
+	if (str[i] == '+' || str[i] == '-')
 	{
 		if (str[i] == '-')
+		{
 			posneg = posneg * -1;
-		if (str[i + 1] == '-' || str[i + 1] == '+')
-			return (0);
+			i++;
+		}
+		if (str[i] == '+')
+			i++;
 	}
-	i++;
 	while (str[i] <= '9' && str[i] >= '0')
 	{
-		res = (res * 10) + (res - '0');
+		res = (res * 10) + (str[i] - '0');
 		i++;
 	}
 	return (res * posneg);
