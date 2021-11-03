@@ -6,7 +6,7 @@
 /*   By: tromano <tromano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 18:33:49 by tromano           #+#    #+#             */
-/*   Updated: 2021/11/03 15:13:08 by tromano          ###   ########.fr       */
+/*   Updated: 2021/11/03 15:50:42 by tromano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ char	*ft_strrchr(const char *s, int c)
 		return (&((char *)s)[i]);
 	return (0);
 }
-
 
 // char	*ft_strrchr(const char *s, int c)
 // {
