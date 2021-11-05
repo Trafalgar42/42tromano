@@ -6,7 +6,7 @@
 /*   By: tromano <tromano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 15:38:34 by tromano           #+#    #+#             */
-/*   Updated: 2021/11/05 14:30:14 by tromano          ###   ########.fr       */
+/*   Updated: 2021/11/05 18:52:30 by tromano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strdup(const char *s)
 {
 	char	*dest;
 
-	if (s == 0)
+	if (*s == 0 && s == 0)
 		return (0);
 	dest = 0;
 	if (dest < s)

@@ -6,7 +6,7 @@
 /*   By: tromano <tromano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 15:37:49 by tromano           #+#    #+#             */
-/*   Updated: 2021/11/05 14:51:19 by tromano          ###   ########.fr       */
+/*   Updated: 2021/11/05 18:49:10 by tromano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	i = 0;
 	if (nmemb == 0 || size == 0)
 		return (ptr = malloc(sizeof(char)));
-	ptr = malloc(sizeof(nmemb) * (size + 1));
+	ptr = malloc(sizeof(nmemb) * (size));
 	if (!ptr)
 		return (0);
 	while (i <= nmemb)

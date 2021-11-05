@@ -6,11 +6,13 @@
 /*   By: tromano <tromano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 14:08:12 by tromano           #+#    #+#             */
-/*   Updated: 2021/11/03 15:22:04 by tromano          ###   ########.fr       */
+/*   Updated: 2021/11/05 18:46:18 by tromano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(char *str)
+#include "libft.h"
+
+int	ft_atoi(const char *str)
 {
 	int	i;
 	int	res;
@@ -23,6 +25,8 @@ int	ft_atoi(char *str)
 		i++;
 	if (str[i] == '+' || str[i] == '-')
 	{
+		if (str[i + 1] == '+' || str[i + 1] == '-')
+			return (0);
 		if (str[i] == '-')
 		{
 			posneg = posneg * -1;
@@ -38,3 +42,11 @@ int	ft_atoi(char *str)
 	}
 	return (res * posneg);
 }
+
+// int	main(void)
+// {
+// 	printf("%d, rep 12\n", ft_atoi("-+42"));
+// 	printf("%d, rep 13\n", ft_atoi("+-42"));
+// 	printf("%d, rep 12 fdp ordi\n", atoi("-+42"));
+// 	printf("%d, rep 13 fdp ordi\n", atoi("+-42"));
+// }
