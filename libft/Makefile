@@ -6,7 +6,7 @@
 #    By: tromano <tromano@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/30 14:14:11 by tromano           #+#    #+#              #
-#    Updated: 2021/11/01 18:15:24 by tromano          ###   ########.fr        #
+#    Updated: 2021/11/08 11:48:01 by tromano          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,8 +53,6 @@ LIBC	= ar rc
 CC		= gcc
 RM		= rm -f
 CFLAGS	= -Wall -Wextra -Werror 
-
-
 
 ${NAME}: ${OBJS}
 	${LIBC} ${NAME} ${OBJS}
