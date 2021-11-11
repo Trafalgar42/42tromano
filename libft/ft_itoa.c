@@ -6,13 +6,13 @@
 /*   By: tromano <tromano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 15:32:53 by tromano           #+#    #+#             */
-/*   Updated: 2021/11/08 19:13:25 by tromano          ###   ########.fr       */
+/*   Updated: 2021/11/10 15:51:16 by tromano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static long int	ft_lenleen(int n)
+int	ft_lenleen(int n)
 {
 	size_t	len;
 
@@ -27,7 +27,7 @@ static long int	ft_lenleen(int n)
 	return (len);
 }
 
-static char	*ft_convert(unsigned int num, size_t len, char *str)
+char	*ft_convert(unsigned int num, size_t len, char *str)
 {
 	while (num > 0)
 	{
