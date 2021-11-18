@@ -6,7 +6,7 @@
 /*   By: tromano <tromano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 13:43:39 by tromano           #+#    #+#             */
-/*   Updated: 2021/11/15 14:43:08 by tromano          ###   ########.fr       */
+/*   Updated: 2021/11/18 12:15:41 by tromano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,27 +15,26 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	int		i;
-	int		len1;
-	int		len2;
+	int		j;
 	char	*s;
 
-	if (s1 || s2)
+	if (!s1 || !s2)
 		return (NULL);
-	len1 = ft_strlen(s1);
-	len2 = ft_stllren(s2);
-	s = malloc(sizeof(char) * (len1 + len2 + 1));
+	s = malloc((sizeof(char)) * (ft_strlen(s1) + ft_strlen(s2) + 1));
 	if (!s)
 		return (NULL);
 	i = 0;
-	while (*s1)
+	j = 0;
+	while (s1[i])
 	{
-		s[i++] = *s1;
-		s1++;
+		s[i] = s1[i];
+		i++;
 	}
-	while (*s2)
+	while (s2[j])
 	{
-		s[i++] = *s2;
-		s2++;
+		s[i] = s2[j];
+		i++;
+		j++;
 	}
 	s[i] = '\0';
 	return (s);

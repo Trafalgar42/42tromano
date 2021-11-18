@@ -6,7 +6,7 @@
 /*   By: tromano <tromano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 15:29:57 by tromano           #+#    #+#             */
-/*   Updated: 2021/11/05 14:00:29 by tromano          ###   ########.fr       */
+/*   Updated: 2021/11/18 16:10:16 by tromano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	dst[j] = '\0';
 	return (i);
 }
-
-// int	main(void)
-// {
-// 	printf("%zu rep du rat", ft_strlcpy("hololo", "halala", 18));
-// 	//printf("%lu rep du bg", strlcpy("hololo", "halala", 7));
-// }

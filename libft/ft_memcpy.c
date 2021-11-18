@@ -6,7 +6,7 @@
 /*   By: tromano <tromano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 16:07:26 by tromano           #+#    #+#             */
-/*   Updated: 2021/11/03 11:25:06 by tromano          ###   ########.fr       */
+/*   Updated: 2021/11/18 16:08:22 by tromano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,3 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
-// int	main(void)
-// {
-// 	printf("%s", memcpy(((void *)0), ((void *)0), 3));
-// 	printf("%s", ft_memcpy(((void *)0), ((void *)0), 3));
-// }

@@ -6,7 +6,7 @@
 /*   By: tromano <tromano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 15:32:53 by tromano           #+#    #+#             */
-/*   Updated: 2021/11/10 15:51:16 by tromano          ###   ########.fr       */
+/*   Updated: 2021/11/18 16:07:51 by tromano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,9 +60,3 @@ char	*ft_itoa(int n)
 	str = ft_convert(num, len, str);
 	return (str);
 }
-
-// int	main(void)
-// {
-// 	printf("%s\n rep du fdp :", ft_itoa(345));
-// 	//printf("%d\n rep du fdp :", itoa(345));
-// }

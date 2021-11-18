@@ -6,7 +6,7 @@
 /*   By: tromano <tromano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 15:31:12 by tromano           #+#    #+#             */
-/*   Updated: 2021/11/09 14:57:18 by tromano          ###   ########.fr       */
+/*   Updated: 2021/11/18 16:10:49 by tromano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,16 +68,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ft_strlcpy(str, s1 + start, end - start + 1);
 	return (str);
 }
-
-// int	main(void)
-// {
-// 	printf("%s\n rep1 du bg :", ft_strtrim("   xxxtripouille", " x"));
-// 	printf("%s\n rep2 du bg :", ft_strtrim("   \t  \n\n \t\t  \n\n\nHello \t  Please\n Trim me !\n   \n \n \t\t\n  ", " \n\t"));
-// 	printf("%s\n rep3 du bg :", ft_strtrim("  \t \t \n   \n\n\n\t", " \n\t"));
-	
-// // 	printf("%d\n rep1 du fdp :", strtrim("Hello \t  Please\n Trim me !", " \n\t"));
-// // 	printf("%d\n rep2 du fdp :", strtrim("   \t  \n\n \t\t  \n\n\nHello \t  Please\n Trim me !\n   \n \n \t\t\n  ", " \n\t"));
-// // 	printf("%d\n rep3 du fdp :", strtrim("  \t \t \n   \n\n\n\t", " \n\t"));
-
-	
-// }
