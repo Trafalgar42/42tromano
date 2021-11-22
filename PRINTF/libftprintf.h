@@ -6,7 +6,7 @@
 /*   By: tromano <tromano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 17:37:47 by tromano           #+#    #+#             */
-/*   Updated: 2021/11/22 15:33:26 by tromano          ###   ########.fr       */
+/*   Updated: 2021/11/22 19:26:46 by tromano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # define LIBFTPRINTF_H
 
 # include <stddef.h>
+# include <stdarg.h>
 # include <stdio.h>
 # include <string.h>
 # include <unistd.h>

@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tromano <marvin@42lausanne.ch>             +#+  +:+       +#+        */
+/*   By: tromano <tromano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/07 17:03:19 by tromano           #+#    #+#             */
-/*   Updated: 2021/09/07 17:03:27 by tromano          ###   ########.fr       */
+/*   Updated: 2021/11/22 20:26:32 by tromano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putstr(char *str)
+void	ft_putstr_count(char *str)
 {
 	while (*str)
 	{

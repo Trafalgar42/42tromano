@@ -6,13 +6,14 @@
 /*   By: tromano <tromano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 14:16:09 by tromano           #+#    #+#             */
-/*   Updated: 2021/11/22 15:28:11 by tromano          ###   ########.fr       */
+/*   Updated: 2021/11/22 20:05:50 by tromano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libftprintf.h"
 
-void	ft_putchar(const char *s)
+int	ft_putchar_count(const char *s)
 {
 	write(1, &s, 1);
+	return (1);
 }

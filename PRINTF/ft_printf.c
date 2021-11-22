@@ -6,12 +6,20 @@
 /*   By: tromano <tromano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 17:43:52 by tromano           #+#    #+#             */
-/*   Updated: 2021/11/22 15:15:12 by tromano          ###   ########.fr       */
+/*   Updated: 2021/11/22 20:12:39 by tromano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libftprintf.h"
+
 int	ft_printf(const char *s, ...)
 {
+	va_list	va_lst;
+	int		printint;
+	char	*printstr;
+	int		count;
+
+	va_start(va_lst, s);
 	while (*s)
 	{
 		if (*s == '%' && *s + 1 == ft_isconv(s))
@@ -22,11 +30,8 @@ int	ft_printf(const char *s, ...)
 
 int	ft_isconv(const char *s)
 {
-	if (*s == 'c' || *s == 's' || *s == 'p' || *s == 'd' || *s == 'i'
-		|| *s == 'u' || *s == 'x' || *s == 'X' || *s == '%')
-		return (1);
-	else
-		return (0);
+	return (*s == 'c' || *s == 's' || *s == 'p' || *s == 'd' || *s == 'i'
+		|| *s == 'u' || *s == 'x' || *s == 'X' || *s == '%');
 }
 
 int	ft_handle(const char *s)
