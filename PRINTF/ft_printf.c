@@ -6,13 +6,27 @@
 /*   By: tromano <tromano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 17:43:52 by tromano           #+#    #+#             */
-/*   Updated: 2021/11/22 14:51:15 by tromano          ###   ########.fr       */
+/*   Updated: 2021/11/22 15:15:12 by tromano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_printf(const char *s, ...)
 {
+	while (*s)
+	{
+		if (*s == '%' && *s + 1 == ft_isconv(s))
+			return (ft_handle(s));
+		s++;
+	}
+}
 
+int	ft_isconv(const char *s)
+{
+	if (*s == 'c' || *s == 's' || *s == 'p' || *s == 'd' || *s == 'i'
+		|| *s == 'u' || *s == 'x' || *s == 'X' || *s == '%')
+		return (1);
+	else
+		return (0);
 }
 
 int	ft_handle(const char *s)

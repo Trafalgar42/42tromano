@@ -1,18 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_handle_c.c                                      :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tromano <tromano@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tromano <marvin@42lausanne.ch>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/22 14:54:06 by tromano           #+#    #+#             */
-/*   Updated: 2021/11/22 15:32:14 by tromano          ###   ########.fr       */
+/*   Created: 2021/09/07 17:03:19 by tromano           #+#    #+#             */
+/*   Updated: 2021/09/07 17:03:27 by tromano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include <unistd.h>
 
-int	ft_handle_c(const char *s)
+void	ft_putstr(char *str)
 {
-	
+	while (*str)
+	{
+		write(1, str, 1);
+		str++;
+	}
 }
+// int main (void)
+// {
+// 	char str[] = "Hello World";
+// 	char i;
+// 	i = 0;
+// 	ft_putstr(str);
+
+// }

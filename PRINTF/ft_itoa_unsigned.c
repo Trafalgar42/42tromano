@@ -6,13 +6,13 @@
 /*   By: tromano <tromano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 14:30:45 by tromano           #+#    #+#             */
-/*   Updated: 2021/11/22 14:32:29 by tromano          ###   ########.fr       */
+/*   Updated: 2021/11/22 15:34:01 by tromano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int	ft_lenleen(unsigned int n)
+int	ft_lenleen_unsigned(unsigned int n)
 {
 	size_t	len;
 
@@ -27,7 +27,7 @@ int	ft_lenleen(unsigned int n)
 	return (len);
 }
 
-char	*ft_convert(unsigned int num, size_t len, char *str)
+char	*ft_convert_unsigned(unsigned int num, size_t len, char *str)
 {
 	while (num > 0)
 	{
@@ -37,13 +37,13 @@ char	*ft_convert(unsigned int num, size_t len, char *str)
 	return (str);
 }
 
-char	*ft_itoa(unsigned int n)
+char	*ft_itoa_unsigned(unsigned int n)
 {
 	size_t				len;
 	unsigned int		num;
 	char				*str;
 
-	len = ft_lenleen(n);
+	len = ft_lenleen_unsigned(n);
 	str = malloc(sizeof(char) * len + 1);
 	if (!str)
 		return (NULL);
@@ -57,6 +57,6 @@ char	*ft_itoa(unsigned int n)
 	}
 	else
 		num = n;
-	str = ft_convert(num, len, str);
+	str = ft_convert_unsigned(num, len, str);
 	return (str);
 }

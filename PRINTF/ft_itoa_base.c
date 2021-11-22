@@ -6,14 +6,13 @@
 /*   By: tromano <tromano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 12:23:31 by tromano           #+#    #+#             */
-/*   Updated: 2021/11/22 14:30:07 by tromano          ###   ########.fr       */
+/*   Updated: 2021/11/22 15:34:24 by tromano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
-#include <stdlib.h>
 
-int	ft_lenleen(int n, int base)
+int	ft_lenleen_base(int n, int base)
 {
 	size_t	len;
 
@@ -28,7 +27,7 @@ int	ft_lenleen(int n, int base)
 	return (len);
 }
 
-char	*ft_convert(unsigned int num, size_t len, char *str, int base)
+char	*ft_convert_base(unsigned int num, size_t len, char *str, int base)
 {
 	while (num > 0)
 	{
@@ -47,7 +46,7 @@ char	*ft_itoa_base(int n, int base)
 	unsigned int		num;
 	char				*str;
 
-	len = ft_lenleen(n, base);
+	len = ft_lenleen_base(n, base);
 	str = malloc(sizeof(char) * len + 1);
 	if (!str)
 		return (NULL);
@@ -61,7 +60,7 @@ char	*ft_itoa_base(int n, int base)
 	}
 	else
 		num = n;
-	str = ft_convert(num, len, str, base);
+	str = ft_convert_base(num, len, str, base);
 	return (str);
 }
 
@@ -84,5 +83,4 @@ char	*ft_itoa_base(int n, int base)
 // 	printf("%s\n", ft_itoa_base(789, 10));
 // 	printf("%s\n", ft_itoa_base(57, 2));
 // 	printf("%s\n", ft_itoa_base(57, 10));
-	
 // }
