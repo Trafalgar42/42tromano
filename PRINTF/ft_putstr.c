@@ -6,13 +6,13 @@
 /*   By: tromano <tromano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/07 17:03:19 by tromano           #+#    #+#             */
-/*   Updated: 2021/11/22 20:26:32 by tromano          ###   ########.fr       */
+/*   Updated: 2021/11/22 20:30:16 by tromano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putstr_count(char *str)
+void	ft_putstr(char *str)
 {
 	while (*str)
 	{
