@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_handle_c.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tromano <tromano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/30 15:37:49 by tromano           #+#    #+#             */
-/*   Updated: 2021/11/19 12:21:17 by tromano          ###   ########.fr       */
+/*   Created: 2021/11/22 14:54:06 by tromano           #+#    #+#             */
+/*   Updated: 2021/11/22 14:55:25 by tromano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libftprintf.h"
 
-void	*ft_calloc(size_t count, size_t size)
+int	ft_handle_c(const char *s)
 {
-	void		*ptr;
-	size_t		len;
-
-	len = count + size;
-	ptr = malloc(len);
-	if (!ptr)
-		return (ptr);
-	ft_bzero(ptr, len);
-	return (ptr);
+	
 }

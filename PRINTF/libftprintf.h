@@ -1,26 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   libftprintf.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tromano <tromano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/30 15:37:49 by tromano           #+#    #+#             */
-/*   Updated: 2021/11/19 12:21:17 by tromano          ###   ########.fr       */
+/*   Created: 2021/11/18 17:37:47 by tromano           #+#    #+#             */
+/*   Updated: 2021/11/22 14:15:02 by tromano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef LIBFTPRINTF_H
 
-void	*ft_calloc(size_t count, size_t size)
-{
-	void		*ptr;
-	size_t		len;
+# define LIBFTPRINTF_H
 
-	len = count + size;
-	ptr = malloc(len);
-	if (!ptr)
-		return (ptr);
-	ft_bzero(ptr, len);
-	return (ptr);
-}
+# include <stddef.h>
+# include <stdio.h>
+# include <string.h>
+# include <unistd.h>
+# include <stdlib.h>
+
+char	*ft_itoa_base(int n, int base);
+
+
+
+
+
+
+
+
+
+#endif
