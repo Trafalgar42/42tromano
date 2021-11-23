@@ -1,22 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_handle_s.c                                      :+:      :+:    :+:   */
+/*   ft_handle_percent.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tromano <tromano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/22 20:07:21 by tromano           #+#    #+#             */
-/*   Updated: 2021/11/23 12:53:03 by tromano          ###   ########.fr       */
+/*   Created: 2021/11/23 13:28:11 by tromano           #+#    #+#             */
+/*   Updated: 2021/11/23 13:30:56 by tromano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int	ft_handle_s(va_list va_lst)
+int	ft_handle_percent(va_list va_lst)
 {
-	char	*printstr;
+	int		count;
+	char	*print;
 
-	printstr = va_arg(va_lst, char *);
-	ft_putstr(printstr);
-	return (ft_strlen(printstr));
+	count = 1;
+	print = va_arg(va_lst, char *);
+	ft_putchar(print);
+	return (count);
 }
