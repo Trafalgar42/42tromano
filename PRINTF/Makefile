@@ -6,7 +6,7 @@
 #    By: tromano <tromano@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/18 17:37:52 by tromano           #+#    #+#              #
-#    Updated: 2021/11/23 13:56:02 by tromano          ###   ########.fr        #
+#    Updated: 2021/11/23 14:01:00 by tromano          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,10 +22,10 @@ SRCS	= ft_strlen.c\
 			ft_handle_u.c\
 			ft_handle_x.c\
 			ft_handle_xmaj.c\
-			ft_atoi.c\
-			ft_atoi_base.c\
-			ft_atoi_base_min.c\
-			ft_atoi_unsigned.c\
+			ft_itoa.c\
+			ft_itoa_base.c\
+			ft_itoa_base_min.c\
+			ft_itoa_unsigned.c\
 			ft_printf.c
 			
 OBJS	= ${SRCS:.c=.o}
@@ -41,7 +41,7 @@ all: ${NAME}
 ${NAME}:	${OBJS}
 			${LIBC} ${NAME} ${OBJS}
 
-clean:	clean_bonus
+clean:
 		${RM} ${OBJS}
 
 fclean: clean

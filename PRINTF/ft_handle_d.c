@@ -6,7 +6,7 @@
 /*   By: tromano <tromano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 13:00:13 by tromano           #+#    #+#             */
-/*   Updated: 2021/11/23 13:08:27 by tromano          ###   ########.fr       */
+/*   Updated: 2021/11/23 13:56:56 by tromano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,6 @@ int	ft_handle_d(va_list va_lst)
 
 	print = va_arg(va_lst, int);
 	strprint = ft_itoa(print);
-	ft_pustr(strprint);
+	ft_putstr(strprint);
 	return (ft_strlen(strprint));
 }
