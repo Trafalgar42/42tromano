@@ -6,19 +6,19 @@
 /*   By: tromano <tromano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 13:09:27 by tromano           #+#    #+#             */
-/*   Updated: 2021/11/23 13:57:08 by tromano          ###   ########.fr       */
+/*   Updated: 2021/11/23 17:40:57 by tromano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int	ft_handle_i(va_list va_lst)
+int	ft_handle_i(int num)
 {
-	int		print;
 	char	*strprint;
+	int		count;
 
-	print = va_arg(va_lst, int);
-	strprint = ft_itoa(print);
+	strprint = ft_itoa(num);
 	ft_putstr(strprint);
-	return (ft_strlen(strprint));
+	count = ft_strlen(strprint);
+	return (count);
 }
