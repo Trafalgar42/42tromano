@@ -6,7 +6,7 @@
 #    By: tromano <tromano@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/18 17:37:52 by tromano           #+#    #+#              #
-#    Updated: 2021/11/24 17:35:39 by tromano          ###   ########.fr        #
+#    Updated: 2021/11/24 18:42:44 by tromano          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,7 @@ SRCS	= ft_strlen.c\
 			
 OBJS	= ${SRCS:.c=.o}
 
-NAME	= ft_printf.a
+NAME	= libftprintf.a
 LIBC	= ar rc
 CC		= gcc
 RM		= rm -f
