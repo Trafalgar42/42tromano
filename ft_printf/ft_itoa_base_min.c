@@ -6,7 +6,7 @@
 /*   By: tromano <tromano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 13:22:49 by tromano           #+#    #+#             */
-/*   Updated: 2021/11/24 15:34:54 by tromano          ###   ########.fr       */
+/*   Updated: 2021/11/26 17:33:38 by tromano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char	*ft_convert_base_min(unsigned long long n, size_t l, char *s, int b)
 {
 	while (n > 0)
 	{
-		if (n % b > 10)
+		if (n % b > 9)
 			s[l--] = 87 + (n % b);
 		else
 			s[l--] = 48 + (n % b);
