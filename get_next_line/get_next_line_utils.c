@@ -6,7 +6,7 @@
 /*   By: tromano <tromano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 12:20:15 by tromano           #+#    #+#             */
-/*   Updated: 2021/12/01 13:44:58 by tromano          ###   ########.fr       */
+/*   Updated: 2021/12/01 15:08:05 by tromano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,24 @@ int	ft_init(t_read *tab, int fd)
 	tab->fd = fd;
 	tab->pos = 0;
 	tab->max = read(tab->fd, tab->str, BUFFER_SIZE);
-	
+	if (tab->max < 0)
+		return (0);
+	else
+		return (1);
+}
+
+char	ft_check(t_read *tab)
+{
+	char	res;
+
+	if (tab->max >= tab->pos)
+	{
+		tab->pos = 0;
+		tab->max = read(tab->fd, tab->str, BUFFER_SIZE);
+		if (tab->max <= 0)
+			return (0);
+	}
+	res = tab->str[tab->pos];
+	tab->pos++;
+	return (res);
 }
