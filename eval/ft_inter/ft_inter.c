@@ -6,7 +6,7 @@
 /*   By: tromano <tromano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 15:41:15 by tromano           #+#    #+#             */
-/*   Updated: 2021/12/13 17:40:28 by tromano          ###   ########.fr       */
+/*   Updated: 2021/12/14 12:12:35 by tromano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,50 +18,36 @@
 ** The display will be followed by a \n.
 */
 
-#include "unistd.h"
-#include "stdio.h"
-#include "stdlib.h"
+#include <unistd.h>
 
-static int	ft_instring(const char *s2, char c)
+int main(int argc, char **argv)
 {
-	int	i;
+	int	used[255];
+	int	i, j;
 
-	i = 0;
-	while (*s2)
+	if (argc == 3)
 	{
-		if (s2[i] == c)
-			return (1);
-		i++;
+		i = 0;
+		while (i < 255)
+			used[i++] = 0;
+		i = 2;
+		while (i > 0)
+		{
+			j = 0;
+			while (argv[i][j])
+			{
+				if (i == 2 && !used[(unsigned char)argv[i][j]])
+					used[(unsigned char)argv[i][j]] = 1;
+				else if (i == 1 && used[(unsigned char)argv[i][j]] == 1)
+				{
+					write(1, &argv[i][j], 1);
+					used[(unsigned char)argv[i][j]] = 2;
+				}
+				j++;
+			}
+			i--;
+		}
 	}
+	write(1, "\n", 1);
 	return (0);
-}
-
-static int	ft_isstart(const char *s1, char c, int len)
-{
-	int	i;
-
-	i = 0;
-	while (s1[i] && s1[i] != c)
-		i++;
-	if (i == len)
-		return (1);
-	return (0);
-}
-
-void	ft_inter(const char *s1, const char *s2)
-{
-	int	i;
-
-	i = 0;
-	while (*s1)
-	{
-		if (ft_instring(s2, s1[i]) && ft_isstart(s1, s1[i], i))
-			write(1, &s1[i], 1);
-		i++;
-	}
-}
-
-int	main(void)
-{
-	ft_inter("123456789", "23456789");
 }
