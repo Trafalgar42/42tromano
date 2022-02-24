@@ -6,7 +6,7 @@
 /*   By: tromano <tromano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 17:00:17 by tromano           #+#    #+#             */
-/*   Updated: 2021/12/06 12:48:19 by tromano          ###   ########.fr       */
+/*   Updated: 2022/02/24 11:07:28 by tromano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,3 +32,16 @@ char	*get_next_line(int fd)
 	}
 	return (str);
 }
+
+// int	main(void)
+// {
+// 	int	fd;
+// 	int	i;
+
+// 	i = 0;
+// 	fd = open("gnl.txt", O_RDONLY);
+// 	while (i++ < 4)
+// 		printf("final : %s", get_next_line(fd));
+// 	//check_leaks();
+// 	return (0);
+// }

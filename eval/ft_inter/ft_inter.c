@@ -6,7 +6,7 @@
 /*   By: tromano <tromano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 15:41:15 by tromano           #+#    #+#             */
-/*   Updated: 2021/12/14 12:12:35 by tromano          ###   ########.fr       */
+/*   Updated: 2022/02/17 14:24:21 by tromano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 
 #include <unistd.h>
 
-int main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
 	int	used[255];
 	int	i, j;

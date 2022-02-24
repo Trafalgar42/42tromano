@@ -1,42 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tromano <tromano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/24 16:59:03 by tromano           #+#    #+#             */
-/*   Updated: 2022/02/22 10:07:41 by tromano          ###   ########.fr       */
+/*   Created: 2022/02/24 10:36:48 by tromano           #+#    #+#             */
+/*   Updated: 2022/02/24 17:36:06 by tromano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 10
-# endif
+#ifndef PUSH_SWAP_H
+# define PUSH_SWAP_H
 
-# include <stddef.h>
+# include "libft.h"
 # include <stdio.h>
-# include <string.h>
 # include <unistd.h>
-# include <stdlib.h>
 # include <stdarg.h>
 # include <fcntl.h>
-# include <dlfcn.h>
+# include <stdlib.h>
 
-typedef struct s_line
-{
-	int		max;
-	int		pos;
-	int		fd;
-	char	str[BUFFER_SIZE];
-}	t_read;
+typedef struct s_swap{
+	int	*a;
+	int	*b;
+	int	len;
 
-char	*get_next_line(int fd);
-int		ft_strlen(const char *str);
-char	*ft_joint(char *str, char c);
-int		ft_init(t_read *tab, int fd);
-char	ft_check(t_read *tab);
+}	t_swap;
 
 #endif
