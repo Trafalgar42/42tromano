@@ -6,7 +6,7 @@
 /*   By: tromano <tromano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 10:36:48 by tromano           #+#    #+#             */
-/*   Updated: 2022/02/24 17:36:06 by tromano          ###   ########.fr       */
+/*   Updated: 2022/02/24 17:57:32 by tromano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,16 @@
 # include <fcntl.h>
 # include <stdlib.h>
 
-typedef struct s_swap{
-	int	*a;
-	int	*b;
-	int	len;
+typedef struct s_dlist{
+	t_node	*first;
+	t_node	*last;
+	int		size;
+}t_list;
 
-}	t_swap;
+typedef struct s_node{
+	int		n;
+	t_node	*prev;
+	t_node	*next;
+}	t_node;
 
 #endif

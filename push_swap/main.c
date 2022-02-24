@@ -6,7 +6,7 @@
 /*   By: tromano <tromano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 10:49:58 by tromano           #+#    #+#             */
-/*   Updated: 2022/02/24 17:51:29 by tromano          ###   ########.fr       */
+/*   Updated: 2022/02/24 18:00:10 by tromano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,26 +15,20 @@
 int	main(int argc, char **argv)
 {
 	char	**tab;
-	int		*arr = 0;
 	int		i;
-	int		j;
-	int		g;
 
+	i = 0;
 	tab = 0;
-	i = 1;
-	j = 0;
-	g = 0;
 	if (argc == 2)
 	{
-		tab = ft_split(&argv[i][j], ' ');
+		tab = ft_split(&argv[1], ' ');
 	}
 	else if (argc > 2)
 	{
 		while (argv[i])
 		{
-			arr[g] = ft_atoi(&argv[i]);
-			g++;
-			i++;
+			
+			 = ft_atoi(&argv[i]);
 		}
 	}
 }
