@@ -1,27 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   dlstgetcontent.c                                   :+:      :+:    :+:   */
+/*   syracause.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tromano <tromano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/25 14:34:09 by tromano           #+#    #+#             */
-/*   Updated: 2022/03/08 12:22:04 by tromano          ###   ########.fr       */
+/*   Created: 2022/03/08 10:49:04 by tromano           #+#    #+#             */
+/*   Updated: 2022/03/08 10:56:01 by tromano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//retourne le contenu d'un noeud a la position i
+#include <stdio.h>
 
-#include "push_swap.h"
-
-void	*dlstgetcontent(t_dlist *dl, size_t i)
+int	main(int argc, char **argv)
 {
-	t_node	*node;
+	unsigned int	res;
 
-	if (!dl || dl->size < i)
-		return (NULL);
-	node = dl->first;
-	while (i--)
-		node = node->next;
-	return (node->content);
+	res = 0;
+	if (argc != 2)
+		return (printf("%s", "Un entier uniquement"));
+	else
+		res = atoi(argv[1]);
+	while ()
+	{
+		if (res % 2 != 0)
+		{
+			res = res * 3;
+			res += 1;
+		}
+		else
+	}
 }

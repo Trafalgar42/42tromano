@@ -6,11 +6,22 @@
 #    By: tromano <tromano@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/24 15:10:36 by tromano           #+#    #+#              #
-#    Updated: 2022/03/03 15:20:15 by tromano          ###   ########.fr        #
+#    Updated: 2022/03/08 13:35:34 by tromano          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS	= main.c\
+			dlist/dlstaddback.c\
+			dlist/dlstaddfront.c\
+			dlist/dlstcpy.c\
+			dlist/dlstgetcontent.c\
+			dlist/dlstnew.c\
+			dlist/dlstpushfirst.c\
+			dlist/dlstpushlast.c\
+			dlist/dsltclear.c\
+			utils/3num.c
+
+			
 
 OBJS        =    ${SRCS:.c=.o}
 NAME        =    push_swap

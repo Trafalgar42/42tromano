@@ -6,7 +6,7 @@
 /*   By: tromano <tromano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/25 12:28:59 by tromano           #+#    #+#             */
-/*   Updated: 2022/02/25 15:28:36 by tromano          ###   ########.fr       */
+/*   Updated: 2022/03/08 13:33:17 by tromano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ t_dlist	*dlstcpy(t_dlist *dl, void *(*f)(void *))
 
 	if (!dl || !f)
 		return (NULL);
-	dlist = dlistnew();
+	dlist = dlstnew();
 	if (!dlist)
 		return (NULL);
 	if (!dl->size)

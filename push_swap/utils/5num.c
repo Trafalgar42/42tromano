@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   dlstgetcontent.c                                   :+:      :+:    :+:   */
+/*   5num.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tromano <tromano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/25 14:34:09 by tromano           #+#    #+#             */
-/*   Updated: 2022/03/08 12:22:04 by tromano          ###   ########.fr       */
+/*   Created: 2022/03/08 13:37:41 by tromano           #+#    #+#             */
+/*   Updated: 2022/03/08 14:07:35 by tromano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//retourne le contenu d'un noeud a la position i
-
 #include "push_swap.h"
 
-void	*dlstgetcontent(t_dlist *dl, size_t i)
+void	fivenum(t_stacks *stack)
 {
-	t_node	*node;
-
-	if (!dl || dl->size < i)
-		return (NULL);
-	node = dl->first;
-	while (i--)
-		node = node->next;
-	return (node->content);
+	stack->b->last = dsltpushfirst(stack->a);
+	stack->b->first = dsltpushfirst(stack->a);
+	threenum(stack->a);
+	if (stack->b->last > stack->a->last)
+		stack->a->last = dsltpushlast(stack->b);
+	if (stack->b->last < stack->a->last)
+		stack->a->first = dsltpushfirst(stack->b);
 }
