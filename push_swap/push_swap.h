@@ -6,7 +6,7 @@
 /*   By: tromano <tromano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 10:36:48 by tromano           #+#    #+#             */
-/*   Updated: 2022/02/25 09:56:44 by tromano          ###   ########.fr       */
+/*   Updated: 2022/02/25 14:48:30 by tromano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 typedef struct s_dlist{
 	t_node	*first;
 	t_node	*last;
-	int		size;
+	size_t	size;
 }t_dlist;
 
 typedef struct s_node{
