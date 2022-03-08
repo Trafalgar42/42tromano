@@ -6,7 +6,7 @@
 /*   By: tromano <tromano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 10:36:48 by tromano           #+#    #+#             */
-/*   Updated: 2022/03/08 16:01:20 by tromano          ###   ########.fr       */
+/*   Updated: 2022/03/08 17:23:31 by tromano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@
 # define RRB "rrb"
 # define RRR "rrr"
 
-# include "libft.h"
 # include <stdio.h>
 # include <unistd.h>
 # include <stdarg.h>
@@ -58,7 +57,7 @@ t_dlist	*dlstcpy(t_dlist *dl, void *(*f)(void *));
 t_dlist	*dlstaddfront(t_dlist *dl, void *content);
 t_dlist	*dlstaddback(t_dlist *dl, void *content);
 
-void	threenum(t_dlist *dl);
+void	threenum(t_dlist *dl, t_stacks *stacks);
 void	swap(t_dlist *dl);
 void	do_op(t_stacks *stacks, char *op);
 
