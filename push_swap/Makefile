@@ -6,11 +6,11 @@
 #    By: tromano <tromano@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/24 15:10:36 by tromano           #+#    #+#              #
-#    Updated: 2022/03/08 13:35:34 by tromano          ###   ########.fr        #
+#    Updated: 2022/03/09 14:04:52 by tromano          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS	= main.c\
+SRCS	= push_swap.c\
 			dlist/dlstaddback.c\
 			dlist/dlstaddfront.c\
 			dlist/dlstcpy.c\
@@ -19,7 +19,10 @@ SRCS	= main.c\
 			dlist/dlstpushfirst.c\
 			dlist/dlstpushlast.c\
 			dlist/dsltclear.c\
-			utils/3num.c
+			dlist/swap.c\
+			utils/3num.c\
+			utils/do_op.c\
+			utils/strtodlst.c
 
 			
 
@@ -28,9 +31,10 @@ NAME        =    push_swap
 AR          =    ar rcs
 GCC         =    gcc
 RM          =    rm -f
-CFLAGS      =    -Wall -Wextra -Werror
-LBFT_PATH   =    ../libft/
-FRAMLIBS    =    -L ${LBFT_PATH} -lft
+CFLAGS      =    -Wall -Wextra -Werror -fsanitize=address -g
+LBFT_PATH   =	 ../libft/
+PRINT_PATH	=	 ../ft_printf_final/
+FRAMLIBS    =    -L ${LBFT_PATH} -lft -L ${PRINT_PATH} -lft
 
 all:		$(NAME)
 
@@ -39,15 +43,18 @@ all:		$(NAME)
 
 $(NAME):	$(OBJS)
 			@$(MAKE) -C $(LBFT_PATH)
+			@$(MAKE) -C $(PRINT_PATH)
 			$(GCC) $(OBJS) $(CFLAGS) -o $(NAME) $(FRAMLIBS)
 
 clean:
 			${RM} ${OBJS}
 			@$(MAKE) -C $(LBFT_PATH) clean
+			@$(MAKE) -C $(PRINT_PATH) clean
 
 fclean:        clean
 			${RM} ${NAME}
 			@$(MAKE) -C $(LBFT_PATH) fclean
+			@$(MAKE) -C $(PRINT_PATH) fclean
 
 re:			fclean all
 

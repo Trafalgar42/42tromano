@@ -6,7 +6,7 @@
 /*   By: tromano <tromano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 10:36:48 by tromano           #+#    #+#             */
-/*   Updated: 2022/03/08 16:01:20 by tromano          ###   ########.fr       */
+/*   Updated: 2022/03/09 13:52:23 by tromano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,8 +57,9 @@ void	*dlstgetcontent(t_dlist *dl, size_t i);
 t_dlist	*dlstcpy(t_dlist *dl, void *(*f)(void *));
 t_dlist	*dlstaddfront(t_dlist *dl, void *content);
 t_dlist	*dlstaddback(t_dlist *dl, void *content);
-
-void	threenum(t_dlist *dl);
+void	dstrtodlst(t_stacks *stacks, char **argstr);
+void	strtodlst(t_stacks *stacks, char *str);
+void	threenum(t_dlist *dl, t_stacks *stacks);
 void	swap(t_dlist *dl);
 void	do_op(t_stacks *stacks, char *op);
 
