@@ -6,7 +6,7 @@
 /*   By: tromano <tromano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 11:21:57 by tromano           #+#    #+#             */
-/*   Updated: 2022/03/09 17:13:14 by tromano          ###   ########.fr       */
+/*   Updated: 2022/03/09 18:08:00 by tromano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,21 +33,22 @@ void	strtodlst(t_stacks *stacks, char *str)
 	char	**tab;
 	int		i;
 	int		j;
+	int		*content;
 
+	content = 0;
 	tab = malloc(sizeof(tab));
 	tab = ft_split(str, ' ');
 	i = 0;
 	j = 0;
-	while (tab[i][j])
+	while (tab[i])
+		i++;
+	content = malloc(sizeof(int) * i);
+	i = 0;
+	while (tab[i])
 	{
-		dlstaddback(stacks->a, (void *)ft_atoi(tab[i]));
+		*content = ft_atoi(tab[i]);
+		dlstaddback(stacks->a, content);
+		printf("wsh%d\n", *content);
 		i++;
 	}
 }
-	// while (i < 3)
-	// {
-	// 	*content = ft_atoi(*tab + i);
-	// 	printf("wsh %d\n ", *content);
-	// 	
-	// 	i++;
-	// }
