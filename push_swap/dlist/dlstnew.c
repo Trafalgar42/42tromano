@@ -6,7 +6,7 @@
 /*   By: tromano <tromano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 18:02:57 by tromano           #+#    #+#             */
-/*   Updated: 2022/02/25 15:13:43 by tromano          ###   ########.fr       */
+/*   Updated: 2022/03/11 16:20:17 by tromano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_dlist	*dlstnew(void)
 
 	new_content = malloc(sizeof(t_dlist));
 	if (!new_content)
-		return (NULL);
+		return (new_content);
 	(*new_content).size = 0;
 	(*new_content).last = NULL;
 	(*new_content).first = NULL;

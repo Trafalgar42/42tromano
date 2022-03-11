@@ -6,7 +6,7 @@
 /*   By: tromano <tromano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 10:36:48 by tromano           #+#    #+#             */
-/*   Updated: 2022/03/09 13:52:23 by tromano          ###   ########.fr       */
+/*   Updated: 2022/03/11 17:53:00 by tromano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@
 # include <stdarg.h>
 # include <fcntl.h>
 # include <stdlib.h>
+# include <limits.h>
 
 typedef struct s_node{
 	void			*content;
@@ -49,18 +50,22 @@ typedef struct s_stacks{
 
 }t_stacks;
 
-void	dlstclear(t_dlist **dl);
-t_node	*dsltpushlast(t_dlist *dl);
-t_node	*dsltpushfirst(t_dlist *dl);
-t_dlist	*dlstnew(void);
-void	*dlstgetcontent(t_dlist *dl, size_t i);
-t_dlist	*dlstcpy(t_dlist *dl, void *(*f)(void *));
-t_dlist	*dlstaddfront(t_dlist *dl, void *content);
-t_dlist	*dlstaddback(t_dlist *dl, void *content);
-void	dstrtodlst(t_stacks *stacks, char **argstr);
-void	strtodlst(t_stacks *stacks, char *str);
-void	threenum(t_dlist *dl, t_stacks *stacks);
-void	swap(t_dlist *dl);
-void	do_op(t_stacks *stacks, char *op);
+void		swap(t_dlist *dl);
+void		dlstclear(t_dlist **dl);
+t_node		*dsltpushlast(t_dlist *dl);
+t_node		*dsltpushfirst(t_dlist *dl);
+t_dlist		*dlstnew(void);
+void		*dlstgetcontent(t_dlist *dl, size_t i);
+t_dlist		*dlstcpy(t_dlist *dl, void *(*f)(void *));
+t_dlist		*dlstaddfront(t_dlist *dl, void *content);
+t_dlist		*dlstaddback(t_dlist *dl, void *content);
+t_dlist		*dstrtodlst(char **argstr, int argc);
+t_dlist		*strtodlst(char *str);
+void		threenum(t_stacks *stacks);
+void		do_op(t_stacks *stacks, char *op);
+int			checkarg(char **arr, int i);
+int			checkdouble(t_dlist *dlst);
+int			checkorder(t_dlist *dl);
+void		freetab(char **tab);
 
 #endif

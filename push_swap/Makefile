@@ -6,7 +6,7 @@
 #    By: tromano <tromano@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/24 15:10:36 by tromano           #+#    #+#              #
-#    Updated: 2022/03/09 14:04:52 by tromano          ###   ########.fr        #
+#    Updated: 2022/03/11 15:15:35 by tromano          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,11 @@ SRCS	= push_swap.c\
 			dlist/swap.c\
 			utils/3num.c\
 			utils/do_op.c\
-			utils/strtodlst.c
+			utils/strtodlst.c\
+			utils/checkarg.c\
+			utils/checkdouble.c\
+			utils/checkorder.c\
+			utils/freetab.c
 
 			
 

@@ -6,49 +6,60 @@
 /*   By: tromano <tromano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 11:21:57 by tromano           #+#    #+#             */
-/*   Updated: 2022/03/09 18:08:00 by tromano          ###   ########.fr       */
+/*   Updated: 2022/03/11 16:27:13 by tromano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	dstrtodlst(t_stacks *stacks, char **argstr)
+t_dlist	*dstrtodlst(char **argstr, int argc)
 {
-	int		i;
+	t_dlist	*dl;
 	int		*content;
+	int		i;
 
-	content = malloc(sizeof(argstr));
-	i = 1;
-	while (argstr[i])
+	if (!checkarg(argstr, 1))
+		return (NULL);
+	dl = dlstnew();
+	i = 0;
+	while (*argstr[++i] < argc)
 	{
+		content = malloc(sizeof(int));
+		if (!content)
+			return (NULL);
 		*content = ft_atoi(argstr[i]);
-		printf("%d\n", *content);
-		dlstaddback(stacks->a, content);
-		i++;
+		dlstaddback(dl, content);
 	}
+	if (!dl || !content)
+		dlstclear(&dl);
+	return (dl);
 }
 
-void	strtodlst(t_stacks *stacks, char *str)
+t_dlist	*strtodlst(char *str)
 {
 	char	**tab;
-	int		i;
-	int		j;
+	t_dlist	*dl;
 	int		*content;
+	int		i;
 
-	content = 0;
-	tab = malloc(sizeof(tab));
 	tab = ft_split(str, ' ');
-	i = 0;
-	j = 0;
-	while (tab[i])
-		i++;
-	content = malloc(sizeof(int) * i);
-	i = 0;
-	while (tab[i])
+	if (checkarg(tab, 0) == 0)
 	{
-		*content = ft_atoi(tab[i]);
-		dlstaddback(stacks->a, content);
-		printf("wsh%d\n", *content);
-		i++;
+		freetab(tab);
+		return (NULL);
 	}
+	dl = dlstnew();
+	i = -1;
+	while (tab[++i])
+	{
+		content = malloc(sizeof(int));
+		if (!content)
+			return (NULL);
+		*content = ft_atoi(tab[i]);
+		dlstaddback(dl, content);
+	}
+	if (!dl || !content)
+		dlstclear(&dl);
+	freetab(tab);
+	return (dl);
 }
