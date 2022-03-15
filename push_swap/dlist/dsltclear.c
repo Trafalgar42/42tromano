@@ -6,7 +6,7 @@
 /*   By: tromano <tromano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/25 14:51:00 by tromano           #+#    #+#             */
-/*   Updated: 2022/03/09 15:46:30 by tromano          ###   ########.fr       */
+/*   Updated: 2022/03/15 10:03:12 by tromano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	dlstclear(t_dlist **dl)
 	if (!*dl)
 		return ;
 	current = (*dl)->first;
-	while (current->next)
+	while (current)
 	{
 		next = current->next;
 		free(&(current)->content);

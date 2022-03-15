@@ -6,7 +6,7 @@
 /*   By: tromano <tromano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 10:36:48 by tromano           #+#    #+#             */
-/*   Updated: 2022/03/11 17:53:00 by tromano          ###   ########.fr       */
+/*   Updated: 2022/03/15 16:51:22 by tromano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,10 +62,21 @@ t_dlist		*dlstaddback(t_dlist *dl, void *content);
 t_dlist		*dstrtodlst(char **argstr, int argc);
 t_dlist		*strtodlst(char *str);
 void		threenum(t_stacks *stacks);
+void		fivenum(t_stacks *stack);
 void		do_op(t_stacks *stacks, char *op);
 int			checkarg(char **arr, int i);
 int			checkdouble(t_dlist *dlst);
 int			checkorder(t_dlist *dl);
 void		freetab(char **tab);
+t_dlist		*putfirst(t_dlist *dl, t_node *node);
+t_dlist		*putlast(t_dlist *dl, t_node *node);
+int			onesmallest(t_stacks *stacks);
+int			twosmallest(t_stacks *stacks);
+int			threesmallest(t_stacks *stacks);
+int			foursmallest(t_stacks *stacks);
+int			fivesmallest(t_stacks *stacks);
+void		pushsmallest(t_stacks *stacks);
+void		printstack(t_stacks *stacks);
+void		threesolve(t_stacks *stacks, t_node *f, t_node *m, t_node *l);
 
 #endif

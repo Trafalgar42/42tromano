@@ -31,6 +31,9 @@
 		"unordered_map": "c",
 		"unordered_set": "c",
 		"utility": "c",
-		"vector": "c"
+		"vector": "c",
+		"bitset": "c",
+		"initializer_list": "c",
+		"iterator": "c"
 	}
 }

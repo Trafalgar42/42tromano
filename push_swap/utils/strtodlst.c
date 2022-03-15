@@ -6,7 +6,7 @@
 /*   By: tromano <tromano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 11:21:57 by tromano           #+#    #+#             */
-/*   Updated: 2022/03/11 16:27:13 by tromano          ###   ########.fr       */
+/*   Updated: 2022/03/15 11:19:07 by tromano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@ t_dlist	*dstrtodlst(char **argstr, int argc)
 	int		*content;
 	int		i;
 
-	if (!checkarg(argstr, 1))
+	if (checkarg(argstr, 1) == 0)
 		return (NULL);
 	dl = dlstnew();
 	i = 0;
-	while (*argstr[++i] < argc)
+	while (++i < argc)
 	{
 		content = malloc(sizeof(int));
 		if (!content)
