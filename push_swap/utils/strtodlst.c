@@ -6,7 +6,7 @@
 /*   By: tromano <tromano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 11:21:57 by tromano           #+#    #+#             */
-/*   Updated: 2022/03/15 11:19:07 by tromano          ###   ########.fr       */
+/*   Updated: 2022/03/16 16:30:26 by tromano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_dlist	*dstrtodlst(char **argstr, int argc)
 	int		*content;
 	int		i;
 
-	if (checkarg(argstr, 1) == 0)
+	if (!checkarg(argstr, 1))
 		return (NULL);
 	dl = dlstnew();
 	i = 0;
@@ -43,7 +43,7 @@ t_dlist	*strtodlst(char *str)
 	int		i;
 
 	tab = ft_split(str, ' ');
-	if (checkarg(tab, 0) == 0)
+	if (!checkarg(tab, 0))
 	{
 		freetab(tab);
 		return (NULL);

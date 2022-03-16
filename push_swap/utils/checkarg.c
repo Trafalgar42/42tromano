@@ -6,7 +6,7 @@
 /*   By: tromano <tromano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 11:26:47 by tromano           #+#    #+#             */
-/*   Updated: 2022/03/11 15:14:38 by tromano          ###   ########.fr       */
+/*   Updated: 2022/03/16 16:33:11 by tromano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,13 @@ int	checkarg(char **arr, int i)
 			j = 0;
 		while (arr[i][j])
 		{
-			if (INT_MIN <= ft_atol(arr[i]) && INT_MAX >= ft_atol(arr[i])
-				&& ((*arr[i] <= '9' && '0' <= *arr[i]) || *arr[i] == ' '))
+			if (INT_MIN < ft_atol(arr[i]) && INT_MAX > ft_atol(arr[i])
+				&& ((*arr[i] <= 57 && 48 <= *arr[i]) || *arr[i] == ' '))
 				j++;
 			else
+			{
 				return (0);
+			}
 		}
 		i++;
 	}
