@@ -6,7 +6,7 @@
 /*   By: tromano <tromano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 10:49:58 by tromano           #+#    #+#             */
-/*   Updated: 2022/03/16 16:38:30 by tromano          ###   ########.fr       */
+/*   Updated: 2022/03/29 17:55:45 by tromano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,28 +34,23 @@
 
 int	main(int argc, char **argv)
 {
-	t_stacks	*stack;
+	t_stacks	stack;
 
-	if (argc == 1)
+	if (argc <= 1)
 		return (0);
-	stack = malloc(sizeof(t_stacks));
 	if (argc == 2)
-		stack->a = strtodlst(argv[1]);
+		stack.a = strtodlst(argv[1]);
 	else
-		stack->a = dstrtodlst(argv, argc);
-	stack->b = dlstnew();
-	if (!stack->a || !stack->b || !checkdouble(stack->a) || !checkarg(argv, 1))
-	{
+		stack.a = dstrtodlst(argv, argc);
+	stack.b = dlstnew();
+	if (!stack.a || !stack.b || !checkdouble(stack.a))
 		ft_putstr_fd("Error\n", 2);
+	else if (!checkorder(stack.a))
+	{
+		if (stack.a->size == 3)
+			threenum(&stack);
+		if (stack.a->size == 5)
+			fivenum(&stack);
 	}
-	else if (stack->a->size == 3)
-		threenum(stack);
-	else if (stack->a->size == 5)
-		fivenum(stack);
 	return (0);
 }
-	//dlstclear(&(stack)->a);
-	//dlstclear(&(stack)->b);
-	//printf("%p\n", stack->a->first->content);
-	//printf("%p\n", stack->a->first->next->content);
-	//printf("%p\n", stack->a->last->content);
