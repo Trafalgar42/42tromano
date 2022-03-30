@@ -6,7 +6,7 @@
 /*   By: tromano <tromano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 11:26:47 by tromano           #+#    #+#             */
-/*   Updated: 2022/03/29 16:25:42 by tromano          ###   ########.fr       */
+/*   Updated: 2022/03/30 16:31:11 by tromano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,14 @@ int	checkarg(char **arr, int i)
 		return (0);
 	while (arr[i])
 	{
-		if (arr[i][0] == '-')
+		if (arr[i][0] == '-' && ft_isdigit(arr[i][1]))
 			j = 1;
 		else
 			j = 0;
 		while (arr[i][j])
 		{
-			if (INT_MIN <= ft_atol(arr[i]) && INT_MAX <= ft_atol(arr[i])
-				&& ((arr[i][j] <= '9' && '0' <= arr[i][j]) || arr[i][j] == ' '))
+			if (((arr[i][j] <= '9' && arr[i][j] >= '0') || arr[i][j] == ' ')
+				&& (INT_MIN < ft_atoi(arr[i]) && INT_MAX > ft_atoi(arr[i])))
 				j++;
 			else
 			{

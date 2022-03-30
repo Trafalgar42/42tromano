@@ -6,7 +6,7 @@
 /*   By: tromano <tromano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 10:49:58 by tromano           #+#    #+#             */
-/*   Updated: 2022/03/29 17:55:45 by tromano          ###   ########.fr       */
+/*   Updated: 2022/03/30 16:13:48 by tromano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int	main(int argc, char **argv)
 {
 	t_stacks	stack;
 
-	if (argc <= 1)
+	if (argc == 1)
 		return (0);
 	if (argc == 2)
 		stack.a = strtodlst(argv[1]);
@@ -45,12 +45,17 @@ int	main(int argc, char **argv)
 	stack.b = dlstnew();
 	if (!stack.a || !stack.b || !checkdouble(stack.a))
 		ft_putstr_fd("Error\n", 2);
-	else if (!checkorder(stack.a))
+	else
 	{
 		if (stack.a->size == 3)
 			threenum(&stack);
-		if (stack.a->size == 5)
+		else if (stack.a->size == 5)
 			fivenum(&stack);
 	}
 	return (0);
 }
+	// printf("a %d\n", (*(int *)stack.a->first->content));
+	// printf("a %d\n", (*(int *)stack.a->first->next->content));
+	// printf("a %d\n", (*(int *)stack.a->first->next->next->content));
+	// printf("a %d\n", (*(int *)stack.a->last->prev->content));
+	// printf("a %d\n", (*(int *)stack.a->last->content));
