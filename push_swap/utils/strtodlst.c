@@ -6,7 +6,7 @@
 /*   By: tromano <tromano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 11:21:57 by tromano           #+#    #+#             */
-/*   Updated: 2022/03/30 16:26:59 by tromano          ###   ########.fr       */
+/*   Updated: 2022/04/01 11:55:13 by tromano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_dlist	*dstrtodlst(char **argstr, int argc)
 	int		*content;
 	int		i;
 
-	if (!checkarg(argstr, 1) || ft_strlen(*argstr) > 1)
+	if (!checkarg(argstr, 1))
 	{
 		return (0);
 	}

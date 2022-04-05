@@ -6,7 +6,7 @@
 /*   By: tromano <tromano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 14:08:12 by tromano           #+#    #+#             */
-/*   Updated: 2022/03/30 15:13:12 by tromano          ###   ########.fr       */
+/*   Updated: 2022/03/31 12:43:11 by tromano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,22 +60,48 @@ int	ft_isspace(int i)
 		|| i == '\v' || i == '\r');
 }
 
+// long	ft_atol(const char *str)
+// {
+// 	long	nb;
+// 	long	posneg;
+
+// 	nb = 0;
+// 	posneg = 1;
+// 	while (ft_isspace(*str))
+// 		str++;
+// 	if (*str == '-' || *str == '+')
+// 		if (*str++ == '-')
+// 			posneg = -posneg;
+// 	if (*str != '\0' && '0' <= *str && *str <= '9')
+// 	{
+// 		nb = (long)(*str - '0') + (10 * nb);
+// 		str++;
+// 	}
+// 	return (nb * posneg);
+// }
+
 long	ft_atol(const char *str)
 {
 	long	nb;
-	long	posneg;
+	int		posneg;
 
 	nb = 0;
-	posneg = 1;
-	while (ft_isspace(*str))
+	posneg = 0;
+	while (ft_isspace(*str) || *str == 32)
 		str++;
 	if (*str == '-' || *str == '+')
 		if (*str++ == '-')
-			posneg = -posneg;
-	if (*str != '\0' && '0' <= *str && *str <= '9')
+			posneg = 1;
+	while (ft_isdigit(*str))
 	{
-		nb = (long)(*str - '0') + (10 * nb);
+		if ((nb > (LONG_MAX - *str + '0')) / 10 && posneg)
+			return (LONG_MIN);
+		if ((nb > (LONG_MAX - *str + '0')) / 10 && !posneg)
+			return (LONG_MAX);
+		nb = 10 * nb + (*str - '0');
 		str++;
 	}
-	return (nb * posneg);
+	if (posneg)
+		return (-nb);
+	return (nb);
 }

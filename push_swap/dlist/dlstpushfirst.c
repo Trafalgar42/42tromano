@@ -6,7 +6,7 @@
 /*   By: tromano <tromano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/25 15:53:41 by tromano           #+#    #+#             */
-/*   Updated: 2022/03/03 15:09:59 by tromano          ###   ########.fr       */
+/*   Updated: 2022/04/05 16:25:54 by tromano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ t_node	*dsltpushfirst(t_dlist *dl)
 		dl->first->prev = NULL;
 		node->next = NULL;
 	}
-	while (dl->size)
-		dl->size--;
+	dl->size--;
 	return (node);
 }

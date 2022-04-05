@@ -6,7 +6,7 @@
 #    By: tromano <tromano@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/24 15:10:36 by tromano           #+#    #+#              #
-#    Updated: 2022/03/15 14:27:24 by tromano          ###   ########.fr        #
+#    Updated: 2022/04/05 14:55:48 by tromano          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,14 @@ SRCS	= push_swap.c\
 			dlist/putfirst.c\
 			dlist/putlast.c\
 			dlist/pushsmallest.c\
-			utils/5num.c
+			utils/5num.c\
+			utils/stoopid.c\
+			utils/stoopid2.c\
+			utils/stoopid3.c\
+			utils/stoopid4.c\
+			dlist/pushbiggest.c\
+			utils/4num.c\
+			utils/algo.c
 
 			
 
